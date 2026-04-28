@@ -10,12 +10,12 @@ public class ClienteModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String nome;
-    String email;
-    int idade;
-    String telefone;
-    String endereco;
+    private Long id;
+    private String nome;
+    private String email;
+    private int idade;
+    private String telefone;
+    private String endereco;
 
     public ClienteModel(){
     }
