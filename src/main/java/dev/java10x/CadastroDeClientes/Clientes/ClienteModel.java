@@ -21,7 +21,13 @@ public class ClienteModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+
+    @Column(unique = true)
+    private String cpf;
+
+    @Column(unique = true)
     private String email;
+
     private int idade;
     private String telefone;
     private String endereco;

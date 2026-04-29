@@ -2,13 +2,14 @@ package dev.java10x.CadastroDeClientes.Pedidos;
 
 import dev.java10x.CadastroDeClientes.Clientes.ClienteModel;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.xml.crypto.Data;
 @Entity
 @Table(name = "tb_pedidos")
-@lombok.Data
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class PedidosModel {
