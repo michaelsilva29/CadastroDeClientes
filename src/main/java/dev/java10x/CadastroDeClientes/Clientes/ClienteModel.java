@@ -1,6 +1,9 @@
-package dev.java10x.CadastroDeClientes;
+package dev.java10x.CadastroDeClientes.Clientes;
 
+import dev.java10x.CadastroDeClientes.Pedidos.PedidosModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 // Entity ele transforma uma claase em uma entidade do banco e dados
 // JPA = Java Persistence API
@@ -16,6 +19,10 @@ public class ClienteModel {
     private int idade;
     private String telefone;
     private String endereco;
+
+    // Um cliente pode ter varios pedidos
+    @OneToMany(mappedBy = "cliente")
+    private List<PedidosModel> pedidos;
 
     public ClienteModel(){
     }

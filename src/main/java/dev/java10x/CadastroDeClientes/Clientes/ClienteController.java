@@ -1,4 +1,4 @@
-package dev.java10x.CadastroDeClientes;
+package dev.java10x.CadastroDeClientes.Clientes;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
