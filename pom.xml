@@ -39,6 +39,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
 		<!-- Opcional: banco H2 para testes rápidos -->
 		<dependency>
 			<groupId>com.h2database</groupId>
