@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import javax.xml.crypto.Data;
 @Entity
 @Table(name = "tb_pedidos")
 @Data
