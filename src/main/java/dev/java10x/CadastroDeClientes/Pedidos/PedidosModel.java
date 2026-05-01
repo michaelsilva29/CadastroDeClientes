@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
+
 @Entity
 @Table(name = "tb_pedidos")
 @Data
@@ -17,7 +20,7 @@ public class PedidosModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Data data;
+    private LocalDate data;
     private Double valorTotal;
     private String status;
     private String descricao;

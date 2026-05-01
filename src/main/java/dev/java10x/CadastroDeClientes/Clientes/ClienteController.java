@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping  // Anotação para colocar todas as rotas no mesmo lugar
 public class ClienteController {
 
-    @GetMapping("/boasVindas") // pegar informações
+    @GetMapping("/boasvindas") // pegar informações
     public String boasvindas(){
         return "Essa é a minha primeira mensagem nessa rota";
     }

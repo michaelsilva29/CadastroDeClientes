@@ -3,7 +3,6 @@ package dev.java10x.CadastroDeClientes.Clientes;
 import dev.java10x.CadastroDeClientes.Pedidos.PedidosModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Cleanup;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
