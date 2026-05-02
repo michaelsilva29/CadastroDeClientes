@@ -3,7 +3,7 @@ package dev.java10x.CadastroDeClientes.Clientes;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping  // Anotação para colocar todas as rotas no mesmo lugar
+@RequestMapping("/clientes")  // Anotação para colocar todas as rotas no mesmo lugar
 public class ClienteController {
 
     @GetMapping("/boasvindas") // pegar informações
@@ -18,13 +18,13 @@ public class ClienteController {
     }
 
     // Mostrar todos dos Clientes (READ)
-    @GetMapping("/todos")
+    @GetMapping("/listar")
     public String mostrarTodosClientes(){
         return "Mostrar todos os Clientes";
     }
 
     // Mostrar Clientes por ID (READ)
-    @GetMapping("/todosID")
+    @GetMapping("/listarID")
     public String mostrarTodosOsClientesPorId(){
         return "Mostrar Clientes por ID";
     }

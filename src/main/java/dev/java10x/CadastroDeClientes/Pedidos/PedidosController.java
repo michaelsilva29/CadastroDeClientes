@@ -3,7 +3,7 @@ package dev.java10x.CadastroDeClientes.Pedidos;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("pedidos")
+@RequestMapping("/pedidos")
 public class PedidosController {
 
     // GET -- Mandar uma requisição para mostrar os pedidos
