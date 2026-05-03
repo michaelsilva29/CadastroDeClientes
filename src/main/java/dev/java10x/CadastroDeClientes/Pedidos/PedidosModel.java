@@ -1,5 +1,7 @@
 package dev.java10x.CadastroDeClientes.Pedidos;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.java10x.CadastroDeClientes.Clientes.ClienteModel;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -28,6 +30,7 @@ public class PedidosModel {
     // Um pedido só pode ter um cliente
     @ManyToOne
     @JoinColumn(name = "clientes_id") // Foreing Key ou chave estrangeira
+    @JsonIgnore
     private ClienteModel cliente;
 
 
