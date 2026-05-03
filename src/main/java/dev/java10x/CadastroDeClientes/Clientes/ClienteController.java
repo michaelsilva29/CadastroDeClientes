@@ -2,9 +2,17 @@ package dev.java10x.CadastroDeClientes.Clientes;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/clientes")  // Anotação para colocar todas as rotas no mesmo lugar
 public class ClienteController {
+
+    private ClienteService clienteService;
+
+    public ClienteController(ClienteService clienteService) {
+        this.clienteService = clienteService;
+    }
 
     @GetMapping("/boasvindas") // pegar informações
     public String boasvindas(){
@@ -19,14 +27,14 @@ public class ClienteController {
 
     // Mostrar todos dos Clientes (READ)
     @GetMapping("/listar")
-    public String mostrarTodosClientes(){
-        return "Mostrar todos os Clientes";
+    public List<ClienteModel> listarClientes(){
+        return clienteService.listarClientes();
     }
 
     // Mostrar Clientes por ID (READ)
     @GetMapping("/listarID")
-    public String mostrarTodosOsClientesPorId(){
-        return "Mostrar Clientes por ID";
+    public List<ClienteModel> listarClientesId(List<Long> ids) {
+
     }
 
     // Alterar dados dos Clientes (UPDATE)

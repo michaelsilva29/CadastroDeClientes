@@ -1,5 +1,7 @@
 package dev.java10x.CadastroDeClientes.Clientes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import dev.java10x.CadastroDeClientes.Pedidos.PedidosModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
