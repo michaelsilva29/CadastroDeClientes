@@ -5,6 +5,7 @@ import jakarta.persistence.Id;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClienteService {
@@ -18,6 +19,12 @@ public class ClienteService {
     // Listar todos os meus clientes
     public List<ClienteModel> listarClientes() {
         return clienteRepository.findAll();
+    }
+
+    // Listar todos os ninjas por ID
+    public ClienteModel listarClientesPorId(Long id){
+        Optional<ClienteModel> clienPorId = clienteRepository.findById(id);
+        return clienPorId.orElse(null);
     }
 
 

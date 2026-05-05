@@ -32,10 +32,11 @@ public class ClienteController {
     }
 
     // Mostrar Clientes por ID (READ)
-    @GetMapping("/listarID")
-    public List<ClienteModel> listarClientesId() {
-        return clienteService.
+    @GetMapping("/listar/{id}")
+    public ClienteModel listarNinjasPorid(@PathVariable Long id){
+        return clienteService.listarClientesPorId(id);
     }
+
 
     // Alterar dados dos Clientes (UPDATE)
     @PutMapping("/alterarID")
