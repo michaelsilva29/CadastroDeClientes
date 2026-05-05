@@ -33,8 +33,8 @@ public class ClienteController {
 
     // Mostrar Clientes por ID (READ)
     @GetMapping("/listarID")
-    public List<ClienteModel> listarClientesId(List<Long> ids) {
-
+    public List<ClienteModel> listarClientesId() {
+        return clienteService.
     }
 
     // Alterar dados dos Clientes (UPDATE)
