@@ -19,10 +19,10 @@ public class ClienteController {
         return "Essa é a minha primeira mensagem nessa rota";
     }
 
-    // Add Cliente (CREATE)
+    // Adicionar Cliente (CREATE)
     @PostMapping("/criar")
-    public String criarCliente(){
-        return "Cliente criado";
+    public ClienteModel criarCliente(@RequestBody ClienteModel clienteModel){
+        return clienteService.criarCliente(clienteModel);
     }
 
     // Mostrar todos dos Clientes (READ)

@@ -21,11 +21,18 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
-    // Listar todos os ninjas por ID
+    // Listar todos os Clientes por ID
     public ClienteModel listarClientesPorId(Long id){
         Optional<ClienteModel> clienPorId = clienteRepository.findById(id);
         return clienPorId.orElse(null);
     }
+
+    //Criar um Novo Cliente
+    public ClienteModel criarCliente(ClienteModel cliente){
+        return clienteRepository.save(cliente);
+    }
+
+    // Excluir
 
 
 
