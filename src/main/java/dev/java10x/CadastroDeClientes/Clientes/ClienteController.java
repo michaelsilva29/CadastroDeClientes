@@ -45,9 +45,9 @@ public class ClienteController {
     }
 
     // Deletar ClienteS (DETELE)
-    @DeleteMapping("/detetarID")
-    public String deletarClientesPorId(){
-        return "Ninja deletado por ID";
+    @DeleteMapping("/deletar/{id}")
+    public void deletarClientesPorId(@PathVariable Long id){
+        clienteService.deletarCLientePorId(id);
     }
 
 

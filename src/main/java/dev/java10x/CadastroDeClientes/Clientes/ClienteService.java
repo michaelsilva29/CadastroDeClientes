@@ -23,8 +23,8 @@ public class ClienteService {
 
     // Listar todos os Clientes por ID
     public ClienteModel listarClientesPorId(Long id){
-        Optional<ClienteModel> clienPorId = clienteRepository.findById(id);
-        return clienPorId.orElse(null);
+        Optional<ClienteModel> clientePorId = clienteRepository.findById(id);
+        return clientePorId.orElse(null);
     }
 
     //Criar um Novo Cliente
@@ -32,7 +32,10 @@ public class ClienteService {
         return clienteRepository.save(cliente);
     }
 
-    // Excluir
+    // Excluir o cliente por ID
+    public void deletarCLientePorId(Long id){
+        clienteRepository.deleteById(id);
+    }
 
 
 
