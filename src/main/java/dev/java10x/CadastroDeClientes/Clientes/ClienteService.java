@@ -37,6 +37,16 @@ public class ClienteService {
         clienteRepository.deleteById(id);
     }
 
+    // Atualizar Cliente
+    public ClienteModel atualizarNinja(Long id, ClienteModel clienteModel){
+        if (clienteRepository.existsById(id)){
+            clienteModel.setId(id);
+            return clienteRepository.save(clienteModel);
+        }
+        return null;
+    }
+
+
 
 
 
